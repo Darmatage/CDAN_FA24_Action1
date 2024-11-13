@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 
 public class GameHandler : MonoBehaviour {
 
@@ -16,19 +18,66 @@ public class GameHandler : MonoBehaviour {
 
       public bool isDefending = false;
 
+      public static bool GameisPaused = false;
+      public GameObject pauseMenuUI;
+      public AudioMixer mixer;
+      public static float volumeLevel = 1.0f;
+      private Slider sliderVolumeCtrl;
+
+
       public static bool stairCaseUnlocked = false;
       //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
 
       private string sceneName;
       public static string lastLevelDied;  //allows replaying the Level where you died
 
+      void Awake(){
+            SetLevel (volumeLevel);
+            GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
+            if (sliderTemp != null){
+                  sliderVolumeCtrl = sliderTemp.GetComponent<Slider>();
+                  sliderVolumeCtrl.value = volumeLevel;
+            }
+      }
+
+
       void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
+            pauseMenuUI.SetActive(false);
+            GameisPaused = false;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
                   playerHealth = StartPlayerHealth;
             //}
             updateStatsDisplay();
+      }
+
+      void Update(){
+                if (Input.GetKeyDown(KeyCode.Escape)){
+                        if (GameisPaused){ Resume(); }
+                        else{ Pause(); }
+                }
+                // Stat tester:
+                //if (Input.GetKey("p")){
+                //       Debug.Log("Player Stat = " + playerStat1);
+                //}
+      }
+
+      public void Pause(){
+                pauseMenuUI.SetActive(true);
+                Time.timeScale = 0f;
+                GameisPaused = true;
+      }
+
+      public void Resume(){
+                pauseMenuUI.SetActive(false);
+                Time.timeScale = 1f;
+                GameisPaused = false;
+      }
+
+      public void SetLevel (float sliderValue){
+                mixer.SetFloat("MusicVolume", Mathf.Log10 (sliderValue) * 20);
+                volumeLevel = sliderValue;
       }
 
       public void playerGetTokens(int newTokens){
@@ -87,6 +136,7 @@ public class GameHandler : MonoBehaviour {
       // Return to MainMenu
       public void RestartGame() {
             Time.timeScale = 1f;
+            GameHandler_PauseMenu.GameisPaused = false;
             SceneManager.LoadScene("MainMenu");
              // Reset all static variables here, for new games:
             playerHealth = StartPlayerHealth;
@@ -95,6 +145,7 @@ public class GameHandler : MonoBehaviour {
       // Replay the Level where you died
       public void ReplayLastLevel() {
             Time.timeScale = 1f;
+            GameHandler_PauseMenu.GameisPaused = false;
             SceneManager.LoadScene(lastLevelDied);
              // Reset all static variables here, for new games:
             playerHealth = StartPlayerHealth;
