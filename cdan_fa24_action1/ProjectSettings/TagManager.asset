@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameHandler
   - PauseMenuSlider
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Level
-  - 
-  - 
+  - walls
+  - Ground
   - 
   - 
   - 
