@@ -19,7 +19,17 @@ public class PickUp : MonoBehaviour{
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
         // //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
     }
+    public void OnTriggerEnter2D(Collider2D other){
+      if(other.gameObject.tag == "Player"){
+        GetComponent<Collider2D>().enabled = false;
+        //GetComponent<AudioSource>().Play();
+        StartCoroutine(DestroyThis());
 
+        if(isHealthPickUp == true){
+          
+        }
+      }
+    }
     // Update is called once per frame
     void Update()
     {

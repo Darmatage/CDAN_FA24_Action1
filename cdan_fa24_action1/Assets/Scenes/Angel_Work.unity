@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 1048341455}
   - component: {fileID: 1048341456}
   m_Layer: 0
-  m_Name: HealthPickup
+  m_Name: pickup_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 90
   m_Sprite: {fileID: 21300000, guid: 5eb679fc52a3b4795852d200b2c8a4c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
