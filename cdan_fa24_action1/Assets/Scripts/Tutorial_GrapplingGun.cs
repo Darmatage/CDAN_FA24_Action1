@@ -133,16 +133,12 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     public void Grapple()
     {
-      if (Input.GetKeyDown(KeyCode.Space))
-      {
-        Debug.Log("Space pressed");
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {
             m_springJoint2D.distance = targetDistance;
             m_springJoint2D.frequency = targetFrequncy;
         }
-      }
         if (!launchToPoint)
         {
             if (autoConfigureDistance)
