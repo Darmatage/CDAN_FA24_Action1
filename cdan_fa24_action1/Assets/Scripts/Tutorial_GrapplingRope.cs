@@ -76,8 +76,10 @@ public class Tutorial_GrapplingRope : MonoBehaviour
         {
             if (!isGrappling)
             {
-                grapplingGun.Grapple();
-                isGrappling = true;
+				if (grapplingGun.canGrapplePull == true){
+                	grapplingGun.Grapple();
+                	isGrappling = true;
+				}
             }
             if (waveSize > 0)
             {

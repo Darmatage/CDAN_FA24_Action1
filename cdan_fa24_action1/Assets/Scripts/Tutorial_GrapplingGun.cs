@@ -50,6 +50,8 @@ public class Tutorial_GrapplingGun : MonoBehaviour
     [HideInInspector] public Vector2 grapplePoint;
     [HideInInspector] public Vector2 grappleDistanceVector;
 
+	public bool canGrapplePull = false;
+
     private void Start()
     {
         grappleRope.enabled = false;
@@ -59,6 +61,12 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Update()
     {
+		if (Input.GetKey("space")){
+			canGrapplePull = true;
+		}else if (Input.GetKeyUp("space")){
+			canGrapplePull = false;
+		}
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SetGrapplePoint();
@@ -131,6 +139,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         }
     }
 
+	//pull the player towards the grapple points
     public void Grapple()
     {
         m_springJoint2D.autoConfigureDistance = false;
