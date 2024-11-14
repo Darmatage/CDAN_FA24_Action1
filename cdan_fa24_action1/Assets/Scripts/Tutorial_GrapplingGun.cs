@@ -61,17 +61,17 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Update()
     {
-		if (Input.GetKey("space")){
+		if (Input.GetButton("GrapplePull")){
 			canGrapplePull = true;
-		}else if (Input.GetKeyUp("space")){
+		}else if (Input.GetButtonUp("GrapplePull")){
 			canGrapplePull = false;
 		}
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetButtonDown("Fire1"))
         {
             SetGrapplePoint();
         }
-        else if (Input.GetKey(KeyCode.Mouse0))
+        else if (Input.GetButton("Fire1"))
         {
             if (grappleRope.enabled)
             {
