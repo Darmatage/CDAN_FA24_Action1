@@ -80,7 +80,7 @@ public class GameHandler : MonoBehaviour {
                 volumeLevel = sliderValue;
       }
 
-      public void playerGetTokens(int newTokens){
+      public void playerKillEnemy(int newTokens){
             gotTokens += newTokens;
             updateStatsDisplay();
       }
@@ -113,7 +113,7 @@ public class GameHandler : MonoBehaviour {
             healthTextTemp.text = "HEALTH: " + playerHealth;
 
             Text tokensTextTemp = tokensText.GetComponent<Text>();
-            tokensTextTemp.text = "GOLD: " + gotTokens;
+            tokensTextTemp.text = "Enemies Killed: " + gotTokens;
       }
 
       public void playerDies(){

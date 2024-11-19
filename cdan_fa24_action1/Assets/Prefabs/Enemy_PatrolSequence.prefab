@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 4911202695481583382}
   m_Layer: 0
   m_Name: Enemy_PatrolSequence
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ Transform:
   - {fileID: 3391507262695579833}
   - {fileID: 513243996030238632}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2170463962615892412
 BoxCollider2D:

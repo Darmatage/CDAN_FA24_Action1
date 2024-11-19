@@ -395,7 +395,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 983456498517843304, guid: 19ef2833b0bb9454a9aadc5e1b141b27, type: 3}
       propertyPath: NextLevel
-      value: SceneWin
+      value: Level3
       objectReference: {fileID: 0}
     - target: {fileID: 3909160243679755226, guid: 19ef2833b0bb9454a9aadc5e1b141b27, type: 3}
       propertyPath: m_Name

@@ -54,6 +54,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Start()
     {
+		m_camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
 

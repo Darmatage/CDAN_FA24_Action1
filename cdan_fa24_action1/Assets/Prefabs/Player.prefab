@@ -365,6 +365,7 @@ GameObject:
   - component: {fileID: 8536903963470745833}
   - component: {fileID: 2030133229902125951}
   - component: {fileID: 2419265728122765817}
+  - component: {fileID: 4488745811612940099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -387,7 +388,7 @@ Transform:
   - {fileID: 5757142931106189301}
   - {fileID: 5586740497513871513}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2337778309298194850
 BoxCollider2D:
@@ -494,6 +495,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b917b9dac061b4f6ea9d444c81a48f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4488745811612940099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7984808981127599285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b932ed8539be04aad84b746dbc21d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentVelocity: 0
+  attackVelocity: 2
 --- !u!1 &8050186837032446883
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,3 +628,4 @@ MonoBehaviour:
   targetFrequncy: 1
   grapplePoint: {x: 0, y: 0}
   grappleDistanceVector: {x: 0, y: 0}
+  canGrapplePull: 0
