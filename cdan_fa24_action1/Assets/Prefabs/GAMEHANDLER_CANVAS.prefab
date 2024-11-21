@@ -981,6 +981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MONOLOGUE_BOX
       objectReference: {fileID: 0}
+    - target: {fileID: 1667079413924988723, guid: 5c007302e25b541b2b12a8d67317ff53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2374169138462007262, guid: 5c007302e25b541b2b12a8d67317ff53, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

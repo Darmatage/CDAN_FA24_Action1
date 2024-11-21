@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 8143977779560856242}
   - component: {fileID: 3683813406030004280}
   - component: {fileID: 5047782166297721745}
+  - component: {fileID: 3287700378129595604}
   m_Layer: 0
   m_Name: EnemyPatrol
   m_TagString: enemy
@@ -299,3 +300,19 @@ MonoBehaviour:
   groundCheck: {fileID: 9143999957754499277}
   raylength: 2
   damage: 10
+--- !u!114 &3287700378129595604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079734830311450981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a1c7fad375d4ab59175cb94e5ab4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  healthLoot: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0

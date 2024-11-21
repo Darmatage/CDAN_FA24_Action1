@@ -20,7 +20,7 @@ public class EnemyPatrolHit : MonoBehaviour {
 
        void Start(){
               rb = GetComponent<Rigidbody2D>();
-              anim.SetBool("Walk", true);
+              anim = GetComponentInChildren<Animator>();
               if (GameObject.FindWithTag ("GameHandler") != null) {
                   gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
               }
@@ -33,6 +33,7 @@ public class EnemyPatrolHit : MonoBehaviour {
     }
 
        void FixedUpdate(){
+         if (GetComponent<EnemyMeleeDamage>().isDead==false){
               if (hitDwn.collider != false){
                      if (faceRight){
                             rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -50,12 +51,13 @@ public class EnemyPatrolHit : MonoBehaviour {
                      faceRight = !faceRight;
                      transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
               }
+            }
        }
 
        public void OnCollisionEnter2D(Collision2D other){
               if (other.gameObject.tag == "Player") {
                      //anim.SetBool("Attack", true);
-                     gameHandler.playerGetHit(damage);
+                     //gameHandler.playerGetHit(damage);
                      //rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
                      //StartCoroutine(HitEnemy());
               }

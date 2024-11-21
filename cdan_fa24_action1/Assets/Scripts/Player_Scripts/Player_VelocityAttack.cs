@@ -25,7 +25,9 @@ public class Player_VelocityAttack : MonoBehaviour{
 			//if fast enough, kill enemy:
 			if (currentVelocity >= attackVelocity){
 				gameHandler.playerKillEnemy(1);
-				Destroy(other.gameObject);
+				EnemyMeleeDamage enemy = other.gameObject.GetComponent<EnemyMeleeDamage>();
+				enemy.TakeDamage(enemy.maxHealth + 1);
+				//Destroy(other.gameObject);
 			}
 			//otherwise, hurt player:
 			else {
