@@ -57997,15 +57997,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3000266507865905696, guid: ee03b4d46bf70d34cbca9cf93a8030e2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3000266507865905696, guid: ee03b4d46bf70d34cbca9cf93a8030e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.64
       objectReference: {fileID: 0}
     - target: {fileID: 3000266507865905696, guid: ee03b4d46bf70d34cbca9cf93a8030e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 3000266507865905696, guid: ee03b4d46bf70d34cbca9cf93a8030e2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58066,7 +58066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5870897266440870995, guid: 19ef2833b0bb9454a9aadc5e1b141b27, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5870897266440870995, guid: 19ef2833b0bb9454a9aadc5e1b141b27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58123,7 +58123,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3412628421492107245, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3412628421492107245, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: m_LocalScale.x
@@ -58135,11 +58135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3412628421492107245, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.72
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 3412628421492107245, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 3412628421492107245, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -58183,7 +58183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5343715683756110483, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: playerInRange
@@ -58192,6 +58192,56 @@ PrefabInstance:
     - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
       propertyPath: monologueLength
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[0]
+      value: 'My king... '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[1]
+      value: This humble servent regrets to inform you that there are intruders in
+        one's domain!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[2]
+      value: ......
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[3]
+      value: Ah- one has forgotten their lord cannot speak anymore...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[4]
+      value: Are you able to move my lord?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[5]
+      value: If rot has taken your voice then surely it has taken thy legs... It
+        is most unfortunate...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[6]
+      value: Worry not, this humble servant shall teach you a method of motion.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[7]
+      value: 'As seen, one is able to shoot bandages on command. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[8]
+      value: But to move, one must press [Space] to launch forward.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[9]
+      value: Be careful my king, for danger lurks everywhere since your slumber.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057706562509654613, guid: b5d84bfd0cab6459592ea385de0dc7b9, type: 3}
+      propertyPath: monologue.Array.data[10]
+      value: This humble servant will be watching over you
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58536,7 +58586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2374169138462007262, guid: 5c007302e25b541b2b12a8d67317ff53, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2374169138462007262, guid: 5c007302e25b541b2b12a8d67317ff53, type: 3}
       propertyPath: m_AnchorMax.x
