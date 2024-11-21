@@ -6,7 +6,7 @@ public class EnemyPatrolHit : MonoBehaviour {
 
        public float speed = 2f;
        private Rigidbody2D rb;
-       //private Animator anim;
+       private Animator anim;
        public LayerMask groundLayer;
        public LayerMask wallLayer;
        public Transform groundCheck;
@@ -20,10 +20,11 @@ public class EnemyPatrolHit : MonoBehaviour {
 
        void Start(){
               rb = GetComponent<Rigidbody2D>();
-              //anim.SetBool("Walk", true);
+              anim.SetBool("Walk", true);
               if (GameObject.FindWithTag ("GameHandler") != null) {
                   gameHandler = GameObject.FindWithTag ("GameHandler").GetComponent<GameHandler> ();
               }
+              anim.SetBool("Walk", true);
        }
 
     void Update(){
@@ -42,7 +43,7 @@ public class EnemyPatrolHit : MonoBehaviour {
                      faceRight = !faceRight;
                      transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
               }
- 
+
               // wall turning:
               if (hitFwd.collider != false){
                      Debug.Log("I hit a wall");
