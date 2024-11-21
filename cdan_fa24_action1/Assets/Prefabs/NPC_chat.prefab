@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3865628405704467160}
   - component: {fileID: 3637155048723306954}
   - component: {fileID: 6057706562509654613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NPC_chat
   m_TagString: Untagged
   m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
@@ -112,7 +112,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -10}
+  m_Offset: {x: 0, y: -41.76284}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -123,7 +123,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 80}
+  m_Size: {x: 100, y: 16.474323}
   m_EdgeRadius: 0
 --- !u!114 &6057706562509654613
 MonoBehaviour:

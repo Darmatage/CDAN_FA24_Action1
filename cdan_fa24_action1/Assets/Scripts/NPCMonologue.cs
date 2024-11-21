@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NPCMonologue : MonoBehaviour {
        //private Animator anim;
-       private NPCMonologueManager monologueMNGR;
+       public NPCMonologueManager monologueMNGR;
        public string[] monologue; //enter monologue lines into the inspector for each NPC
        public bool playerInRange = false; //could be used to display an image: hit [e] to talk
        public int monologueLength;
