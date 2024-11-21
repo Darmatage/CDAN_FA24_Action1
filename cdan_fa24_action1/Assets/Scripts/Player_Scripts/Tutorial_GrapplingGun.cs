@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tutorial_GrapplingGun : MonoBehaviour
 {
+
+  private Animator anim;
     [Header("Scripts Ref:")]
     public Tutorial_GrapplingRope grappleRope;
 
@@ -54,6 +56,8 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Start()
     {
+      anim = GetComponent<Animator>();
+
 		m_camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
@@ -70,6 +74,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
+          anim.SetBool("isGrapple", true);
             SetGrapplePoint();
         }
         else if (Input.GetButton("Fire1"))
@@ -94,8 +99,10 @@ public class Tutorial_GrapplingGun : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        //else if (Input.GetKeyUp(KeyCode.Mouse0))
+        else if (Input.GetButtonUp("Fire1"))
         {
+          anim.SetBool("isGrapple", false);
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = 1;
