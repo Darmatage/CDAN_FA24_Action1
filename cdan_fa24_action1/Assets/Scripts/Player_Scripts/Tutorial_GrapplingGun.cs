@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tutorial_GrapplingGun : MonoBehaviour
-{
+public class Tutorial_GrapplingGun : MonoBehaviour{
+	private Player_AnimationManager playerAnim;
 
-  private Animator anim;
     [Header("Scripts Ref:")]
     public Tutorial_GrapplingRope grappleRope;
 
@@ -54,14 +53,11 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
 	public bool canGrapplePull = false;
 
-    private void Start()
-    {
-      anim = GetComponent<Animator>();
-
+    private void Start(){
+		playerAnim = GameObject.FindWithTag("Player").GetComponent<Player_AnimationManager>();
 		m_camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         grappleRope.enabled = false;
         m_springJoint2D.enabled = false;
-
     }
 
     private void Update()
@@ -72,11 +68,19 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 			canGrapplePull = false;
 		}
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-          anim.SetBool("isGrapple", true);
+		////initial activation of the grapple gun:
+        if (Input.GetButtonDown("Fire1")){
+			playerAnim.animHead1.SetBool ("isGrapple", true);
+			playerAnim.animTorso1.SetBool ("Fly", true);
+
+			playerAnim.animHead2.SetBool ("isGrapple", true);
+			playerAnim.animTorso2.SetBool ("Fly", true);
+
+          //anim.SetBool("isGrapple", true);
             SetGrapplePoint();
         }
+
+		//hold down the grapple gun:
         else if (Input.GetButton("Fire1"))
         {
             if (grappleRope.enabled)
@@ -99,10 +103,15 @@ public class Tutorial_GrapplingGun : MonoBehaviour
                 }
             }
         }
-        //else if (Input.GetKeyUp(KeyCode.Mouse0))
-        else if (Input.GetButtonUp("Fire1"))
-        {
-          anim.SetBool("isGrapple", false);
+		//release the grapple gun:
+        else if (Input.GetButtonUp("Fire1")){
+			playerAnim.animHead1.SetBool ("isGrapple", false);
+			playerAnim.animTorso1.SetBool ("Fly", false);
+
+			playerAnim.animHead2.SetBool ("isGrapple", false);
+			playerAnim.animTorso2.SetBool ("Fly", false);
+
+          //anim.SetBool("isGrapple", false);
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
             m_rigidbody.gravityScale = 1;

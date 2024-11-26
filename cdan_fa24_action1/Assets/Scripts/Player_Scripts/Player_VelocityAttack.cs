@@ -9,13 +9,12 @@ public class Player_VelocityAttack : MonoBehaviour{
 	private Rigidbody2D rb2D;
 	private GameHandler gameHandler;
 
-    // Start is called before the first frame update
     void Start(){
         rb2D=GetComponent<Rigidbody2D>();
 		gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
     }
 
-    // Update is called once per frame
+	//check the velocity magnitude:
     void Update(){
 		currentVelocity = rb2D.velocity.magnitude;
     }

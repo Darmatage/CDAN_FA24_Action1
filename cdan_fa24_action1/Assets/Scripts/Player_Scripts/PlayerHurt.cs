@@ -3,21 +3,22 @@ using System.Collections;
 using UnityEngine;
 
 public class PlayerHurt: MonoBehaviour{
-
-      //public Animator anim;
-      private Rigidbody2D rb2D;
+	private Rigidbody2D rb2D;
 
       void Start(){
-           //anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
       }
 
-      public void playerHit(){
-            //anim.SetTrigger ("GetHurt");
-      }
+	public void playerHit(){
+		GetComponent<Player_AnimationManager>().animHead1.SetTrigger ("Hurt");
+		GetComponent<Player_AnimationManager>().animTorso1.SetTrigger ("Hurt");
 
-      public void playerDead(){
-            rb2D.isKinematic = true;
-            //anim.SetTrigger ("Dead");
-      }
+		GetComponent<Player_AnimationManager>().animHead2.SetTrigger ("Hurt");
+		GetComponent<Player_AnimationManager>().animTorso2.SetTrigger ("Hurt");
+	}
+
+	public void playerDead(){
+		rb2D.isKinematic = true;
+		//anim.SetTrigger ("Dead");
+	}
 }
