@@ -302,9 +302,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5629170979283054045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.23, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.106, y: 0, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7743316973304220953}
   m_RootOrder: -1
@@ -568,7 +568,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.35
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -615,7 +615,7 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 1
-    numCapVertices: 10
+    numCapVertices: 1
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
@@ -702,6 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3000266507865905696}
   - component: {fileID: 2337778309298194850}
+  - component: {fileID: 2383325758373560177}
   - component: {fileID: 8536903963470745833}
   - component: {fileID: 2030133229902125951}
   - component: {fileID: 2419265728122765817}
@@ -764,7 +765,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14103773}
+  m_Offset: {x: -0.17875385, y: 0.5046108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -775,8 +776,43 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1143551}
+  m_Size: {x: 0.55711734, y: 0.6234487}
   m_EdgeRadius: 0
+--- !u!58 &2383325758373560177
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7984808981127599285}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.17341793, y: -0.120058596}
+  serializedVersion: 2
+  m_Radius: 0.48932827
 --- !u!50 &8536903963470745833
 Rigidbody2D:
   serializedVersion: 4
@@ -929,8 +965,8 @@ MonoBehaviour:
   m_rigidbody: {fileID: 8536903963470745833}
   rotateOverTime: 0
   rotationSpeed: 4
-  hasMaxDistance: 0
-  maxDistnace: 20
+  hasMaxDistance: 1
+  maxDistnace: 35
   launchToPoint: 1
   launchType: 1
   launchSpeed: 1
