@@ -117,7 +117,8 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void playerDies(){
-            player.GetComponent<PlayerHurt>().playerDead();       //play Death animation
+            player.GetComponent<PlayerHurt>().playerDead();
+                   //play Death animation
             lastLevelDied = sceneName;       //allows replaying the Level where you died
             StartCoroutine(DeathPause());
       }
@@ -125,7 +126,7 @@ public class GameHandler : MonoBehaviour {
       IEnumerator DeathPause(){
             //player.GetComponent<PlayerMove>().isAlive = false;
             //player.GetComponent<PlayerJump>().isAlive = false;
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.0f);
             SceneManager.LoadScene("SceneLose");
       }
 
