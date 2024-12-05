@@ -238,8 +238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -47}
-  m_SizeDelta: {x: 600, y: 300}
+  m_AnchoredPosition: {x: 0, y: -4.971}
+  m_SizeDelta: {x: 600, y: 413.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206611885
 MonoBehaviour:
@@ -278,9 +278,13 @@ MonoBehaviour:
 
     Linsey Le
 
+    Angel Campos
+
     Tristan Honnellio
 
-    Angel Campos'
+
+    Audio:
+    Team Wavyrn - Max Jaime'
 --- !u!222 &206611886
 CanvasRenderer:
   m_ObjectHideFlags: 0
