@@ -49,3 +49,6 @@ TagManager:
   - name: BAKCGROUND
     uniqueID: 1382272167
     locked: 0
+  - name: Rope
+    uniqueID: 182756805
+    locked: 0
