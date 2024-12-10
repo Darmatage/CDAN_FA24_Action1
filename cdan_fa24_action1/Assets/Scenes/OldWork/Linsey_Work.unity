@@ -11220,12 +11220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adc16cb32f1e4afdb208371d8e39568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameHandler: {fileID: 1208032562}
   isHealthPickUp: 0
+  isJars: 0
   isSpeedBoostPickUp: 0
   healthBoost: 50
   speedBoost: 2
   speedTime: 2
+  explodePS: {fileID: 0}
 --- !u!82 &1293417514
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11685,6 +11686,7 @@ GameObject:
   - component: {fileID: 1696019381}
   - component: {fileID: 1696019380}
   - component: {fileID: 1696019383}
+  - component: {fileID: 1696019384}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -11764,7 +11766,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1696019383
 MonoBehaviour:
@@ -11779,6 +11781,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camSpeed: 4
+--- !u!114 &1696019384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696019379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee82173f1f68b0f4497b0de8224bf9d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  durationTime: 0.15
+  magnitude: 0.3
 --- !u!1 &1698148408
 GameObject:
   m_ObjectHideFlags: 0
@@ -12813,7 +12829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7399279606215553226, guid: ab9970cad26624e56bca7e85822a8e46, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7399279606215553226, guid: ab9970cad26624e56bca7e85822a8e46, type: 3}
       propertyPath: m_LocalPosition.x

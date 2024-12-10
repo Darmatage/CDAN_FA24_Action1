@@ -37,7 +37,6 @@ public class Player_VelocityAttack : MonoBehaviour{
 			//otherwise, hurt player:
 			else {
 				gameHandler.playerGetHit(10);
-				cameraShake.ShakeCamera(0.10f, 0.2f);
 			}
 		}
 	}

@@ -16,6 +16,9 @@ public class GameHandler : MonoBehaviour {
       public static int gotTokens = 0;
       public GameObject tokensText;
 
+	public static int gotJars = 0;
+	public GameObject jarsText;
+	  
       public bool isDefending = false;
 
       public static bool GameisPaused = false;
@@ -24,12 +27,13 @@ public class GameHandler : MonoBehaviour {
       public static float volumeLevel = 1.0f;
       private Slider sliderVolumeCtrl;
 
-
       public static bool stairCaseUnlocked = false;
       //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
 
       private string sceneName;
       public static string lastLevelDied;  //allows replaying the Level where you died
+
+	private CameraShake cameraShake; 
 
       void Awake(){
             SetLevel (volumeLevel);
@@ -43,6 +47,7 @@ public class GameHandler : MonoBehaviour {
 
       void Start(){
             player = GameObject.FindWithTag("Player");
+			cameraShake = GameObject.FindWithTag("MainCamera").GetComponent<CameraShake>();
             sceneName = SceneManager.GetActiveScene().name;
             pauseMenuUI.SetActive(false);
             GameisPaused = false;
@@ -85,6 +90,11 @@ public class GameHandler : MonoBehaviour {
             updateStatsDisplay();
       }
 
+	public void JarsCollected(int newTokens){
+            gotJars += newTokens;
+            updateStatsDisplay();
+	}
+
       public void playerGetHit(int damage){
            if (isDefending == false){
                   playerHealth -= damage;
@@ -93,6 +103,7 @@ public class GameHandler : MonoBehaviour {
                   }
                   if (damage > 0){
                         player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation
+						cameraShake.ShakeCamera(0.10f, 0.2f);
                   }
             }
 
@@ -111,6 +122,10 @@ public class GameHandler : MonoBehaviour {
       public void updateStatsDisplay(){
             Text healthTextTemp = healthText.GetComponent<Text>();
             healthTextTemp.text = "HEALTH: " + playerHealth;
+
+			Text jarsTextTemp = jarsText.GetComponent<Text>();
+            jarsTextTemp.text = "JARS: " + gotJars;
+		
 
             Text tokensTextTemp = tokensText.GetComponent<Text>();
             tokensTextTemp.text = "Enemies Killed: " + gotTokens;

@@ -39880,6 +39880,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam1: {fileID: 1214318983}
   parallaxEffect: 0.7
+--- !u!1001 &811795966
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 441802764519882492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_Name
+      value: PS_QuickSand_Fountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845461054276685674, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845461054276685674, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -86.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700266828009999492, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d435a80ea8a8141f39d7517324bc6ba4, type: 3}
 --- !u!1 &823795025
 GameObject:
   m_ObjectHideFlags: 0
@@ -41377,7 +41446,7 @@ GameObject:
   - component: {fileID: 2141759854}
   - component: {fileID: 2141759853}
   m_Layer: 0
-  m_Name: Quicksand
+  m_Name: TM_Quicksand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41410,7 +41479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84880511d5a561942899b10f6c2754cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
   damageTime: 1
   qsAmt: 4
   pullOutSandPS: {fileID: 8795201140761280503, guid: 73924c13a42f34adf9f5c0163d99f0fb, type: 3}
@@ -41443,7 +41512,7 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
