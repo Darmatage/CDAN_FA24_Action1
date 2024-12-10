@@ -53,6 +53,10 @@ public class Tutorial_GrapplingGun : MonoBehaviour{
 
 	public bool canGrapplePull = false;
 
+	//for grapple burst, to get out of walls:
+	public Collider2D playerCollider1;
+	public CircleCollider2D playerCollider2;
+
     private void Start(){
 		playerAnim = GameObject.FindWithTag("Player").GetComponent<Player_AnimationManager>();
 		m_camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
@@ -81,20 +85,16 @@ public class Tutorial_GrapplingGun : MonoBehaviour{
         }
 
 		//hold down the grapple gun:
-        else if (Input.GetButton("Fire1"))
-        {
-            if (grappleRope.enabled)
-            {
+        else if (Input.GetButton("Fire1")){
+            if (grappleRope.enabled){
                 RotateGun(grapplePoint, false);
             }
-            else
-            {
+            else{
                 Vector2 mousePos = m_camera.ScreenToWorldPoint(Input.mousePosition);
                 RotateGun(mousePos, true);
             }
 
-            if (launchToPoint && grappleRope.isGrappling)
-            {
+            if (launchToPoint && grappleRope.isGrappling){
                 if (launchType == LaunchType.Transform_Launch)
                 {
                     Vector2 firePointDistnace = firePoint.position - gunHolder.localPosition;
@@ -157,8 +157,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour{
     }
 
 	//pull the player towards the grapple points
-    public void Grapple()
-    {
+    public void Grapple(){
         m_springJoint2D.autoConfigureDistance = false;
         if (!launchToPoint && !autoConfigureDistance)
         {
@@ -196,6 +195,21 @@ public class Tutorial_GrapplingGun : MonoBehaviour{
             }
         }
     }
+
+	//add a short burst of pull when grappling:
+	public void MoveBurst(){
+		StartCoroutine(MoveBurster());
+	}
+
+	IEnumerator MoveBurster(){
+		playerCollider1.enabled=false;
+		playerCollider2.enabled=false;
+		canGrapplePull = true;
+		yield return new WaitForSeconds(0.0001f);
+		canGrapplePull = false;
+		playerCollider1.enabled=true;
+		playerCollider2.enabled=true;
+	}
 
     private void OnDrawGizmosSelected()
     {

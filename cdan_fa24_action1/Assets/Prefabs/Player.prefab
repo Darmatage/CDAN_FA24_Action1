@@ -639,7 +639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grapplingGun: {fileID: 3713072515546439220}
   m_lineRenderer: {fileID: 5315773119937605830}
-  percision: 40
+  precision: 40
   straightenLineSpeed: 5
   ropeAnimationCurve:
     serializedVersion: 2
@@ -765,7 +765,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17875385, y: 0.5046108}
+  m_Offset: {x: -0.050140828, y: 0.5046108}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -776,7 +776,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.55711734, y: 0.6234487}
+  m_Size: {x: 0.2998913, y: 0.6234487}
   m_EdgeRadius: 0
 --- !u!58 &2383325758373560177
 CircleCollider2D:
@@ -976,3 +976,5 @@ MonoBehaviour:
   grapplePoint: {x: 0, y: 0}
   grappleDistanceVector: {x: 0, y: 0}
   canGrapplePull: 0
+  playerCollider1: {fileID: 2337778309298194850}
+  playerCollider2: {fileID: 2383325758373560177}
