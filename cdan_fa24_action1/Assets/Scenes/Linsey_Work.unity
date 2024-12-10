@@ -10292,7 +10292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  damageTime: 0.5
+  damageTime: 1
   qsAmt: 4
   pullOutSandPS: {fileID: 8795201140761280503, guid: 73924c13a42f34adf9f5c0163d99f0fb, type: 3}
 --- !u!1 &984051739
@@ -10631,9 +10631,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 571478522917346572, guid: 1238f4632b461467ca4732062cfea70f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3525150585249597167, guid: 1238f4632b461467ca4732062cfea70f, type: 3}
       propertyPath: m_Name
       value: PickUpBoost
+      objectReference: {fileID: 0}
+    - target: {fileID: 3525150585249597167, guid: 1238f4632b461467ca4732062cfea70f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6865195299578101691, guid: 1238f4632b461467ca4732062cfea70f, type: 3}
       propertyPath: m_RootOrder
