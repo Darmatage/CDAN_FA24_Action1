@@ -886,7 +886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentVelocity: 0
-  attackVelocity: 2
+  attackVelocity: 7
+  smackDownStarPrefab: {fileID: 2373321923086032522, guid: 7ef20979ecad8484d82c7676b5e291b3, type: 3}
 --- !u!114 &4474943495659169162
 MonoBehaviour:
   m_ObjectHideFlags: 0

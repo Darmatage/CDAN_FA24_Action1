@@ -10,10 +10,11 @@ public class EnemyPatrolHit : MonoBehaviour {
        public LayerMask groundLayer;
        public LayerMask wallLayer;
        public Transform groundCheck;
-       bool faceRight = true;
+       public bool faceRight = true;
        RaycastHit2D hitDwn;
-       RaycastHit2D hitFwd;
-       public float raylength = 2f;
+       RaycastHit2D hitSide1;
+		RaycastHit2D hitSide2;
+       public float raylength = 1f;
 
        public int damage = 10;
        private GameHandler gameHandler;
@@ -29,7 +30,14 @@ public class EnemyPatrolHit : MonoBehaviour {
 
     void Update(){
       hitDwn = Physics2D.Raycast(groundCheck.position, -transform.up, raylength, groundLayer);
-      hitFwd = Physics2D.Raycast(groundCheck.position, -transform.up, raylength/2, wallLayer);
+      hitSide1 = Physics2D.Raycast(groundCheck.position, transform.right, raylength/2, wallLayer);
+	  hitSide2 = Physics2D.Raycast(groundCheck.position, -transform.right, raylength/2, wallLayer);
+
+	  //Debug.DrawRay(hitDwn.origin, hitDwn.direction * raylength, Color.green);
+	  //Debug.DrawLine(hitDwn.origin, hitDwn.point, Color.red);
+	  Debug.DrawRay(groundCheck.position, -transform.up * raylength, Color.green);
+	  Debug.DrawRay(groundCheck.position, transform.right * raylength/2, Color.red);
+	  Debug.DrawRay(groundCheck.position, -transform.right * raylength/2, Color.red);
     }
 
        void FixedUpdate(){
@@ -46,7 +54,7 @@ public class EnemyPatrolHit : MonoBehaviour {
               }
 
               // wall turning:
-              if (hitFwd.collider != false){
+              if ((hitSide1.collider != false)||(hitSide2.collider != false)){
                      Debug.Log("I hit a wall");
                      faceRight = !faceRight;
                      transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);

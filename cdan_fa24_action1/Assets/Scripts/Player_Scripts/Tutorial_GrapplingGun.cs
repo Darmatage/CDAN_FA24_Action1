@@ -205,7 +205,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour{
 		playerCollider1.enabled=false;
 		playerCollider2.enabled=false;
 		canGrapplePull = true;
-		yield return new WaitForSeconds(0.0001f);
+		yield return new WaitForSeconds(0.02f);
 		canGrapplePull = false;
 		playerCollider1.enabled=true;
 		playerCollider2.enabled=true;
