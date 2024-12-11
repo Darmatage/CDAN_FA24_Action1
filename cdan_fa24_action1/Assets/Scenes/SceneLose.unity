@@ -412,8 +412,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Your rage is lost to the sands of time. \n\nAnd the tomb raiders buy a
-    boat with your jewels"
+  m_Text: "Your rage is lost to the sands of time. \n\nAnd the tomb raiders sell
+    your treasure to the British Museum."
 --- !u!222 &206611886
 CanvasRenderer:
   m_ObjectHideFlags: 0
