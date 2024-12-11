@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5821928084479879875}
   - component: {fileID: 497188152987488950}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: canopic_jar_art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7808497922710372476}
   - component: {fileID: 8351350691747791057}
   - component: {fileID: 185490763673798031}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pickup_ClayJar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4901033735895667790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: baabde53dd08b44248b8346e2a96259f, type: 3}
   m_Name: 
