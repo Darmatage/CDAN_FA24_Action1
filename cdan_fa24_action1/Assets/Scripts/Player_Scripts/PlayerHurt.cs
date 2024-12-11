@@ -10,6 +10,8 @@ public class PlayerHurt: MonoBehaviour{
 	private Color rendColor;
 	public float timeToShowHurt = 0.5f;
 
+	public AudioSource hurtSFX;
+
       void Start(){
            rb2D = transform.GetComponent<Rigidbody2D>();
 		   rend = GetComponentInChildren<SpriteRenderer>();
@@ -24,6 +26,9 @@ public class PlayerHurt: MonoBehaviour{
 		GetComponent<Player_AnimationManager>().animTorso2.SetTrigger ("Hurt");
 
 		rend.material.color = new Color(2.4f, 0.9f, 0.9f, 1f);
+		if (!hurtSFX.isPlaying){
+			hurtSFX.Play();
+		}
 		StartCoroutine(ResetColor());
 	}
 

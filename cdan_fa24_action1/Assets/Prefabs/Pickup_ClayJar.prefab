@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 185490763673798031}
   m_Layer: 6
   m_Name: Pickup_ClayJar
-  m_TagString: Untagged
+  m_TagString: Jar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,9 @@ MonoBehaviour:
   healthBoost: 50
   speedBoost: 2
   speedTime: 2
+  velocityMinimum: 5
   explodePS: {fileID: 2688757693309597010, guid: c08d03f958947334aa5b0282eecc4bdc, type: 3}
+  SmashStar: {fileID: 2373321923086032522, guid: 7ef20979ecad8484d82c7676b5e291b3, type: 3}
 --- !u!114 &8351350691747791057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +240,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 271ee73560772f3418019b1408276460, type: 2}
   m_audioClip: {fileID: 8300000, guid: c7365888e2623824abe6ea029bd2ab18, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0

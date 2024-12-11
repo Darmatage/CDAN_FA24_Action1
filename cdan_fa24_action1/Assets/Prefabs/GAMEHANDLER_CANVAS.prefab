@@ -1051,6 +1051,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 4444336686792688937}
+    - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
+      propertyPath: EnemiesKilledBG
+      value: 
+      objectReference: {fileID: 5249163178520725146}
     - target: {fileID: 6267662855996066941, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
       propertyPath: m_Name
       value: GameHandler

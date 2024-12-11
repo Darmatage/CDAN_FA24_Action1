@@ -10,7 +10,7 @@ public class DamageSlow : MonoBehaviour {
        private float damageTimer = 0f;
        private GameHandler gameHandlerObj;
 
-       //quiksand:
+       //quiksand movement:
        private Vector2 playerVelocityStart;
        private Vector2 playerVelocityHalf;
        public float qsAmt = 4f;
@@ -24,7 +24,7 @@ public class DamageSlow : MonoBehaviour {
 
        void FixedUpdate(){
           if (isDamaging == true){
-              damageTimer += 0.1f;
+              damageTimer += 0.01f;
               if (damageTimer >= damageTime){
                 Debug.Log("I AM DAMAGING YOU!!! In Quicksand");
                 gameHandlerObj.playerGetHit(damage);

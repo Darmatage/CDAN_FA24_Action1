@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - MonologueManager
   - Checkpoint
+  - Jar
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - walls
   - Ground
   - Enemies
-  - 
-  - 
+  - Player_FirePoint
+  - Quicksand
   - 
   - 
   - 
