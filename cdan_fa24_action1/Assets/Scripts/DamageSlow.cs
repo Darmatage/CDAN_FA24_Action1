@@ -8,7 +8,7 @@ public class DamageSlow : MonoBehaviour {
        public float damageTime = 0.5f;
        private bool isDamaging = false;
        private float damageTimer = 0f;
-       private GameHandler gameHandlerObj;
+       public GameHandler gameHandlerObj;
 
        //quiksand movement:
        private Vector2 playerVelocityStart;

@@ -93,8 +93,8 @@ public class GameHandler : MonoBehaviour {
             updateStatsDisplay();
       }
 
-	public void JarsCollected(int newTokens){
-            gotJars += newTokens;
+	public void JarsCollected(int jars){
+            gotJars += jars;
             updateStatsDisplay();
 	}
 
