@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6545440797227051914}
   - component: {fileID: 3680635076049537135}
   - component: {fileID: 7553278058403191771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 4697761330106997128}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3680635076049537135
 BoxCollider2D:
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4697761330106997128}
   - component: {fileID: 2523977834757027093}
   - component: {fileID: 1446667615085575435}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hazard_spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
