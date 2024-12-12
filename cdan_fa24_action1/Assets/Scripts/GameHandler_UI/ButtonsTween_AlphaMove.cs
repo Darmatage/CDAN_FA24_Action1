@@ -23,18 +23,19 @@ public class ButtonsTween_AlphaMove : MonoBehaviour{
        float timer = 0;
        float button1Timer = 0.5f;
        float button2Timer = 1.5f;
-       float button3Timer = 2f;
+       float button3Timer = 2.5f;
 
        float preOffsetPosY;
        float startOffset = -100f;
        Vector3 startButtonPos;
 
 	//Effects:
-	private AudioSource scrapeSFX;
+	public AudioSource scrapeSFX;
 	public UI_Shake UI_toShake;
 	public bool canShake = true;
 
 	void Start(){
+		//scrapeSFX = gameObject.GetComponent<AudioSource>();
 		preOffsetPosY = transform.position.y; //save the destination
 		startButtonPos = transform.position;
 		startButtonPos.y += startOffset;
@@ -45,31 +46,31 @@ public class ButtonsTween_AlphaMove : MonoBehaviour{
 		//buttonText = GetComponentInChildren<TextMeshProUGUI>();
 		buttonText = GetComponentInChildren<Text>();
 		buttonText.color = new Color(2.55f, 2.55f, 2.55f, 0f);
-
-		scrapeSFX = GetComponent<AudioSource>();
-		
     }
 
 	void FixedUpdate () {
 		timer += Time.deltaTime;
 		if (timer >= button1Timer){
 			doButton1=true; 
-			scrapeSFX.Play();
+			
 			if (isButton1){
+				scrapeSFX.Play();
 				ShakeUI();
 			}
 		}
 		if (timer >= button2Timer){
 			doButton2=true; 
-			scrapeSFX.Play();
+			
 			if (isButton2){
+				scrapeSFX.Play();
 				ShakeUI();
 			}
 		}
 		if (timer >= button3Timer){
 			doButton3=true; 
-			scrapeSFX.Play();
+			
 			if (isButton3){
+				scrapeSFX.Play();
 				ShakeUI();
 			}
 		}

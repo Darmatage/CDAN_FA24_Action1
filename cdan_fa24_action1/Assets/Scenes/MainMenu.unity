@@ -490,7 +490,7 @@ PrefabInstance:
       addedObject: {fileID: 998911250}
     - targetCorrespondingSourceObject: {fileID: 5684546208422936094, guid: d0087aebde9234be4bd37a306c5e3ef3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 998911254}
+      addedObject: {fileID: 998911258}
   m_SourcePrefab: {fileID: 100100000, guid: d0087aebde9234be4bd37a306c5e3ef3, type: 3}
 --- !u!224 &152208549 stripped
 RectTransform:
@@ -532,8 +532,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -159.77934}
-  m_SizeDelta: {x: 700, y: 135}
+  m_AnchoredPosition: {x: 0, y: -183}
+  m_SizeDelta: {x: 700, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206611885
 MonoBehaviour:
@@ -849,9 +849,10 @@ MonoBehaviour:
   isButton1: 0
   isButton2: 0
   isButton3: 1
+  scrapeSFX: {fileID: 998911258}
   UI_toShake: {fileID: 863984782}
   canShake: 1
---- !u!82 &998911254
+--- !u!82 &998911258
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -860,10 +861,10 @@ AudioSource:
   m_GameObject: {fileID: 998911249}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 271ee73560772f3418019b1408276460, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.6
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6d2474b7d8da0d04eb7f7607c149dcc3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -955,9 +956,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1477150088061548764, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4859068912711347554, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
       propertyPath: m_Name
       value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4859068912711347554, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7351598461086066531, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
       propertyPath: m_IsActive
@@ -1315,7 +1324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 90}
+  m_AnchoredPosition: {x: 0, y: 33}
   m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654107633
@@ -1332,7 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1564,6 +1573,7 @@ MonoBehaviour:
   isButton1: 0
   isButton2: 1
   isButton3: 0
+  scrapeSFX: {fileID: 1743573678}
   UI_toShake: {fileID: 863984782}
   canShake: 1
 --- !u!82 &1743573678
@@ -1576,9 +1586,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 271ee73560772f3418019b1408276460, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_audioClip: {fileID: 8300000, guid: 6d2474b7d8da0d04eb7f7607c149dcc3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2189,6 +2199,7 @@ MonoBehaviour:
   isButton1: 1
   isButton2: 0
   isButton3: 0
+  scrapeSFX: {fileID: 345284193493865459}
   UI_toShake: {fileID: 863984782}
   canShake: 1
 --- !u!82 &345284193493865459
@@ -2201,9 +2212,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 271ee73560772f3418019b1408276460, type: 2}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_audioClip: {fileID: 8300000, guid: 6d2474b7d8da0d04eb7f7607c149dcc3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
