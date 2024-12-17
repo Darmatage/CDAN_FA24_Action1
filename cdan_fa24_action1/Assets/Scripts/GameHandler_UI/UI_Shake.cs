@@ -31,7 +31,7 @@ public class UI_Shake : MonoBehaviour{
 
 					//transform.localPosition = new Vector3((origPos.x+sX), (origPos.y+sY), origPos.z);
 					transform.position = new Vector3((origPos.x+sX), (origPos.y+sY), origPos.z);
-					Debug.Log("shake:" + transform.position);
+					//Debug.Log("shake:" + transform.position);
 					elapsedTime += Time.deltaTime;
 					yield return null;
               }

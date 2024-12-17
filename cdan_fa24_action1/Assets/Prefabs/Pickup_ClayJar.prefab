@@ -95,8 +95,7 @@ GameObject:
   - component: {fileID: 1517441598919938664}
   - component: {fileID: 4408087163743755704}
   - component: {fileID: 1783620665179713631}
-  - component: {fileID: 7808497922710372476}
-  - component: {fileID: 8351350691747791057}
+  - component: {fileID: 6708495662539394682}
   - component: {fileID: 185490763673798031}
   m_Layer: 6
   m_Name: Pickup_ClayJar
@@ -193,7 +192,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7808497922710372476
+--- !u!114 &6708495662539394682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,32 +201,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4901033735895667790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adc16cb32f1e4afdb208371d8e39568, type: 3}
+  m_Script: {fileID: 11500000, guid: c715bcca8ff476149947e7014f519a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHealthPickUp: 0
-  isJars: 1
-  isSpeedBoostPickUp: 0
-  healthBoost: 50
-  speedBoost: 2
-  speedTime: 2
   velocityMinimum: 5
   explodePS: {fileID: 2688757693309597010, guid: c08d03f958947334aa5b0282eecc4bdc, type: 3}
   SmashStar: {fileID: 2373321923086032522, guid: 7ef20979ecad8484d82c7676b5e291b3, type: 3}
---- !u!114 &8351350691747791057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4901033735895667790}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: baabde53dd08b44248b8346e2a96259f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedS: 2.5
-  distS: 0.5
+  healthPrefab: {fileID: 3525150585249597167, guid: 1238f4632b461467ca4732062cfea70f, type: 3}
 --- !u!82 &185490763673798031
 AudioSource:
   m_ObjectHideFlags: 0

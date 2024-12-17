@@ -684,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7904641536046609081, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8499532966920596716, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
       propertyPath: m_RootOrder
@@ -804,7 +804,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1736951222}
     - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
+      propertyPath: achievmentText
+      value: 
+      objectReference: {fileID: 1965705849}
+    - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
       propertyPath: EnemiesKilledBG
+      value: 
+      objectReference: {fileID: 437314145}
+    - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
+      propertyPath: achievementDisplay
       value: 
       objectReference: {fileID: 437314145}
     - target: {fileID: 6267662855996066941, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}

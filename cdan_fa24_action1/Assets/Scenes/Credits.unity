@@ -460,7 +460,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 404692606}
     - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
+      propertyPath: achievmentText
+      value: 
+      objectReference: {fileID: 1335266984}
+    - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
       propertyPath: EnemiesKilledBG
+      value: 
+      objectReference: {fileID: 1924260773}
+    - target: {fileID: 5208559989761927754, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
+      propertyPath: achievementDisplay
       value: 
       objectReference: {fileID: 1924260773}
     - target: {fileID: 6267662855996066941, guid: e3854cb8515f04b6fb4c551a8ffad54d, type: 3}
@@ -1152,7 +1160,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4859068912711347554, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
       propertyPath: m_Name
-      value: MusicManager
+      value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 7351598461086066531, guid: 804c74bb7eb1ab7408a92547a7097cbb, type: 3}
       propertyPath: m_IsActive

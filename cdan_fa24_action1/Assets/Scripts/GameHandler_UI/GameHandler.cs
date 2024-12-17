@@ -19,20 +19,23 @@ public class GameHandler : MonoBehaviour {
 
 	public static int gotJars = 0;
 	public GameObject jarsText;
+
+	public GameObject achievementDisplay;
+	public GameObject achievmentText;
 	  
-      public bool isDefending = false;
+	public bool isDefending = false;
 
-      public static bool GameisPaused = false;
-      public GameObject pauseMenuUI;
-      public AudioMixer mixer;
-      public static float volumeLevel = 1.0f;
-      private Slider sliderVolumeCtrl;
+	public static bool GameisPaused = false;
+	public GameObject pauseMenuUI;
+	public AudioMixer mixer;
+	public static float volumeLevel = 1.0f;
+	private Slider sliderVolumeCtrl;
 
-      public static bool stairCaseUnlocked = false;
-      //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
+	public static bool stairCaseUnlocked = false;
+	//this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
 
-      private string sceneName;
-      public static string lastLevelDied;  //allows replaying the Level where you died
+	private string sceneName;
+	public static string lastLevelDied;  //allows replaying the Level where you died
 
 	private CameraShake cameraShake; 
 
@@ -56,6 +59,7 @@ public class GameHandler : MonoBehaviour {
                   playerHealth = StartPlayerHealth;
             //}
             updateStatsDisplay();
+			achievementDisplay.SetActive(false);
       }
 
       void Update(){
@@ -91,11 +95,30 @@ public class GameHandler : MonoBehaviour {
       public void playerKillEnemy(int newTokens){
             gotTokens += newTokens;
             updateStatsDisplay();
+			if ((gotTokens == 10)
+			||(gotTokens == 25)
+			||(gotTokens == 50)
+			||(gotTokens == 100)
+			||(gotTokens == 150)
+			||(gotTokens == 200)
+			){
+				StartCoroutine(AchievementDisplay("" + gotTokens + " RAIDERS \nKILLED!"));
+			}
       }
 
 	public void JarsCollected(int jars){
             gotJars += jars;
             updateStatsDisplay();
+
+			if ((gotJars == 10)
+			||(gotJars == 25)
+			||(gotJars == 50)
+			||(gotJars == 100)
+			||(gotJars == 150)
+			||(gotJars == 200)
+			){
+				StartCoroutine(AchievementDisplay("" + gotJars + " JARS \nSMASHED!"));
+			}
 	}
 
       public void playerGetHit(int damage){
@@ -139,6 +162,16 @@ public class GameHandler : MonoBehaviour {
 				EnemiesKilledBG.SetActive(false);
 			}
       }
+
+	IEnumerator AchievementDisplay(string displayText){
+		Debug.Log("Achievement!: " + displayText);
+		Text cheevoText = achievmentText.GetComponent<Text>();
+		cheevoText.text = "" + displayText;
+		
+		achievementDisplay.SetActive(true);
+		yield return new WaitForSeconds(1f);
+		achievementDisplay.SetActive(false);
+	}
 
       public void playerDies(){
             player.GetComponent<PlayerHurt>().playerDead();
