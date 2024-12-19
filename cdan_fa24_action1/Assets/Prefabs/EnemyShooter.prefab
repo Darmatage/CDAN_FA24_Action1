@@ -29,8 +29,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5207623600688079584}
-  - {fileID: 8386139977640474711}
-  - {fileID: 8744170986130470354}
   - {fileID: 3901008528083865936}
   m_Father: {fileID: 337838711462992507}
   m_RootOrder: -1
@@ -60,11 +58,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242607435535109980}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.397, y: -0.146, z: 0}
-  m_LocalScale: {x: 0.11534482, y: 0.19846438, z: 1}
+  m_LocalPosition: {x: -0.057404786, y: -0.752532, z: 0}
+  m_LocalScale: {x: 0.22990796, y: 1.1187323, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 76501652194513094}
+  m_Father: {fileID: 5207623600688079584}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2822614988305298550
@@ -107,9 +105,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 89
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  m_Color: {r: 0.5943396, g: 0.19848697, b: 0.19848697, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -195,7 +193,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 90
   m_Sprite: {fileID: -1870781958, guid: 3ab33c684f50efb4dbedc430affa66d7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.70473474, g: 0.7401406, b: 0.9528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -285,7 +283,9 @@ Transform:
   m_LocalPosition: {x: 0.4258, y: -0.0125, z: 0}
   m_LocalScale: {x: 0.5017, y: 0.17740113, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8386139977640474711}
+  - {fileID: 8744170986130470354}
   m_Father: {fileID: 76501652194513094}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -329,9 +329,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 89
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  m_Color: {r: 0.5943396, g: 0.19848697, b: 0.19848697, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -428,11 +428,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8543768821880148872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.61, y: 0.0352, z: 0}
-  m_LocalScale: {x: 0.8700481, y: 0.08206244, z: 1}
+  m_LocalPosition: {x: 0.36715174, y: 0.26888222, z: 0}
+  m_LocalScale: {x: 1.7342, y: 0.46258128, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 76501652194513094}
+  m_Father: {fileID: 5207623600688079584}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1260227907525381678
@@ -475,9 +475,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 89
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 1}
+  m_Color: {r: 0.5943396, g: 0.19848697, b: 0.19848697, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -500,9 +500,10 @@ GameObject:
   - component: {fileID: 3683813406030004280}
   - component: {fileID: 5047782166297721745}
   - component: {fileID: 3287700378129595604}
+  - component: {fileID: 6729786008357492262}
   m_Layer: 9
   m_Name: EnemyShooter
-  m_TagString: enemy
+  m_TagString: enemyShooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -635,3 +636,22 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   isDead: 0
+--- !u!114 &6729786008357492262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079734830311450981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8c400e5708cfd47bdd675c8b71d3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwShots: 1
+  projectile: {fileID: 1532342930322504994, guid: f47004f4fd5c44248910217e2d96cebf, type: 3}
+  shootBase: {fileID: 76501652194513094}
+  shootPoint: {fileID: 3901008528083865936}
+  attackRange: 10
+  isAttacking: 0
+  muzzleFlash: {fileID: 2373321923086032522, guid: 7ef20979ecad8484d82c7676b5e291b3, type: 3}

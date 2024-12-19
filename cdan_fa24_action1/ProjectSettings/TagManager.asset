@@ -11,6 +11,7 @@ TagManager:
   - Checkpoint
   - Jar
   - AudioManager
+  - enemyShooter
   layers:
   - Default
   - TransparentFX

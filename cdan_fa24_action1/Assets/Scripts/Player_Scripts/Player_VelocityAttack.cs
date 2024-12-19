@@ -23,7 +23,7 @@ public class Player_VelocityAttack : MonoBehaviour{
     }
 
 	void OnCollisionEnter2D(Collision2D other){
-		if (other.gameObject.tag=="enemy"){
+		if ((other.gameObject.tag=="enemy")||(other.gameObject.tag=="enemyShooter")){
 			Debug.Log("Player Velocity on Impact: " + currentVelocity);
 			//if fast enough, kill enemy:
 			if (currentVelocity >= attackVelocity){
