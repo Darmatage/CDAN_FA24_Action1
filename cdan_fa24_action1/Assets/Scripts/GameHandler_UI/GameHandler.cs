@@ -8,14 +8,14 @@ using UnityEngine.Audio;
 
 public class GameHandler : MonoBehaviour {
 
-      private GameObject player;
-      public static int playerHealth = 100;
-      public int StartPlayerHealth = 100;
-      public GameObject healthText;
+	private GameObject player;
+	public static int playerHealth = 100;
+	public int StartPlayerHealth = 100;
+	public GameObject healthText;
 
-      public static int gotTokens = 0;
-      public GameObject tokensText;
-	  public GameObject EnemiesKilledBG;
+	public static int gotTokens = 0;
+	public GameObject tokensText;
+	public GameObject EnemiesKilledBG;
 
 	public static int gotJars = 0;
 	public GameObject jarsText;
@@ -128,7 +128,11 @@ public class GameHandler : MonoBehaviour {
                         updateStatsDisplay();
                   }
                   if (damage > 0){
-                        player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation
+						//play GetHit animation
+                        player.GetComponent<PlayerHurt>().playerHit();
+						//display Vignette:
+						GetComponent<Vignette>().ActivateVignette();
+						//shake camera
 						cameraShake.ShakeCamera(0.10f, 0.2f);
                   }
             }

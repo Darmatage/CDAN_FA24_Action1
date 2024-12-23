@@ -24,10 +24,22 @@ public class PickUp_Jar : MonoBehaviour{
 	public GameObject SmashStar;
 	public GameObject healthPrefab;
 
+	public GameObject[] JarArt;
+
     void Start()
     {
         gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
 		explodeSFX = gameObject.GetComponent<AudioSource>();
+
+		int jarArtRand = Random.Range(0, JarArt.Length);
+		for (int i=0; i < JarArt.Length; i++){
+			if (i==jarArtRand){
+				JarArt[i].SetActive(true);
+			} else {
+				JarArt[i].SetActive(false);
+			}
+		} 
+
 		/*
 		clipStartPitch = explodeSFX.pitch;
 		clipPitch = explodeSFX.pitch;

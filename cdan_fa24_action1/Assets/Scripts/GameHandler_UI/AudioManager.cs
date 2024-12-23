@@ -14,7 +14,7 @@ public class AudioManager : MonoBehaviour{
 	public static float MusicTimeStamp = 0.0f;
 	public float currentTimeStamp;
 
-	void Start(){
+	void Awake(){
 		//set the music based on scene
 		if ((SceneManager.GetActiveScene().name == "MainMenu")
 		|| (SceneManager.GetActiveScene().name == "Credits")
